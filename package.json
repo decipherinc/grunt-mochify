@@ -1,6 +1,6 @@
 {
   "name": "grunt-mochify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Run Mochify with Grunt",
   "main": "tasks/index.js",
   "author": "Christopher Hiller <chiller@decipherinc.com>",
