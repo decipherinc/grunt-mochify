@@ -27,6 +27,24 @@ gruntInitConfig({
 });
 ```
 
+### Defaults
+
+The default reporter is `spec`, like in Mocha.  Mochify's default reporter is `dot`.
+
+`color` is on by default.
+
+### Debug Mode
+
+Even if `debug` is `false` or unspecified in the Grunt config, you can start any target in "debug" mode via:
+
+```shell
+$ grunt mochify:myTarget:debug
+```
+
+### PhantomJS
+
+PhantomJS is a dependency of this module, so you don't have to worry about specifying its path or installing globally or whatever.
+
 ## Installation
 
 ```shell
