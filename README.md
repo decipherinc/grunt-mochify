@@ -2,6 +2,8 @@
 
 Run Mochify with Grunt
 
+[Mochify](https://www.npmjs.com/package/mochify) is an excellent package which will automatically bundle your tests with [Browserify](https://www.npmjs.com/package/browserify), and run them headlessly with [PhantomJS](http://phantomjs.org/).  This package offers a [Grunt](http://gruntjs.com) task to use Mochify.
+
 ## Usage
 
 Refer to [the Mochify Docs](https://github.com/mantoni/mochify.js/blob/master/README.md) for information about options.
