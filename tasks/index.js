@@ -12,7 +12,7 @@ function mochifyTask(grunt) {
 
     var options = this.options({
       reporter: 'spec',
-      colors: true,
+      colors: process.stdout.isTTY,
       debug: target === 'debug',
       phantomjs: path.join(__dirname, '..', 'node_modules', '.bin', 'phantomjs')
     });
