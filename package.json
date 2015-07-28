@@ -2,7 +2,7 @@
   "name": "grunt-mochify",
   "version": "0.1.1",
   "description": "Run Mochify with Grunt",
-  "main": "tasks/index.js",
+  "main": "tasks/mochify.js",
   "author": "Christopher Hiller <chiller@decipherinc.com>",
   "license": "MIT",
   "dependencies": {
