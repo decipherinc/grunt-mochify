@@ -12,7 +12,7 @@ function mochifyTask(grunt) {
       reporter: 'spec',
       colors: process.stdout.isTTY,
       debug: target === 'debug',
-      phantomjs: require.resolve('phantomjs')
+      phantomjs: require.resolve('phantomjs/bin/phantomjs')
     });
 
     var args = map(options, function (value, name) {
