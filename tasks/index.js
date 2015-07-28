@@ -1,9 +1,7 @@
 'use strict';
 
-var mochify = require('mochify');
 var spawn = require('child-process-promise').spawn;
 var map = require('lodash.map');
-var path = require('path');
 
 function mochifyTask(grunt) {
 
@@ -14,7 +12,7 @@ function mochifyTask(grunt) {
       reporter: 'spec',
       colors: process.stdout.isTTY,
       debug: target === 'debug',
-      phantomjs: path.join(__dirname, '..', 'node_modules', '.bin', 'phantomjs')
+      phantomjs: require.resolve('phantomjs')
     });
 
     var args = map(options, function (value, name) {
