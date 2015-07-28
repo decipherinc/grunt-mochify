@@ -21,9 +21,8 @@ function mochifyTask(grunt) {
 
     var mochifyPath = require.resolve('mochify/bin/cmd');
 
-    grunt.verbose.writeln('Spawning Mochify with command %s\n\tand arguments: %s',
-      mochifyPath,
-      grunt.log.wordlist(args));
+    grunt.verbose.writeln('Spawning Mochify with command %s\n\tand ' +
+      'arguments: %s', mochifyPath, grunt.log.wordlist(args));
 
     spawn(mochifyPath, args)
       .progress(function (childProcess) {
