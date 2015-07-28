@@ -10,7 +10,7 @@ function mochifyTask(grunt) {
 
     var options = this.options({
       reporter: 'spec',
-      colors: process.stdout.isTTY,
+      colors: !!process.stdout.isTTY,
       debug: target === 'debug',
       phantomjs: require.resolve('phantomjs/bin/phantomjs')
     });
@@ -20,6 +20,10 @@ function mochifyTask(grunt) {
     }).concat(this.filesSrc);
 
     var mochifyPath = require.resolve('mochify/bin/cmd');
+
+    grunt.verbose.writeln('Spawning Mochify with command %s\n\tand arguments: %s',
+      mochifyPath,
+      grunt.log.wordlist(args));
 
     spawn(mochifyPath, args)
       .progress(function (childProcess) {
