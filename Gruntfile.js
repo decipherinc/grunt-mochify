@@ -48,7 +48,7 @@ module.exports = function (grunt) {
         devUpdate: 'grunt-dev-update',
         'bump-only': 'grunt-bump',
         'bump-commit': 'grunt-bump',
-        'mocha_istanbul': 'grunt-mocha-istanbul'
+        'mochify': 'tasks/mochify.js'
       }
     },
     data: data
