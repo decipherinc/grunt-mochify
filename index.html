@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>grunt-mochify by decipherinc</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>grunt-mochify</h1>
+        <p>Run Mochify with Grunt</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/decipherinc/grunt-mochify" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/decipherinc/grunt-mochify/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/decipherinc/grunt-mochify/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a id="grunt-mochify" class="anchor" href="#grunt-mochify" aria-hidden="true"><span class="octicon octicon-link"></span></a>grunt-mochify</h1>
+
+<p>Run Mochify with Grunt</p>
+
+<p><a href="https://www.npmjs.com/package/mochify">Mochify</a> is an excellent package which will automatically bundle your tests with <a href="https://www.npmjs.com/package/browserify">Browserify</a>, and run them headlessly with <a href="http://phantomjs.org/">PhantomJS</a>.  This package offers a <a href="http://gruntjs.com">Grunt</a> task to use Mochify.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Refer to <a href="https://github.com/mantoni/mochify.js/blob/master/README.md">the Mochify Docs</a> for information about options.</p>
+
+<p>This is a multi-task, so:</p>
+
+<div class="highlight highlight-js"><pre>gruntInitConfig({
+  mochify<span class="pl-k">:</span> {
+    options<span class="pl-k">:</span> {
+      reporter<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>spec<span class="pl-pds">'</span></span>
+    },
+    myTarget<span class="pl-k">:</span> {
+      src<span class="pl-k">:</span> [
+        <span class="pl-s"><span class="pl-pds">'</span>test/file.js<span class="pl-pds">'</span></span>, 
+        <span class="pl-s"><span class="pl-pds">'</span>test/anotherFile.js<span class="pl-pds">'</span></span>, 
+        <span class="pl-s"><span class="pl-pds">'</span>test/more-tests/**.js<span class="pl-pds">'</span></span>
+      ],
+      options<span class="pl-k">:</span> {
+        require<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>./test/fixture.js<span class="pl-pds">'</span></span>
+      }
+    }
+});</pre></div>
+
+<h3>
+<a id="defaults" class="anchor" href="#defaults" aria-hidden="true"><span class="octicon octicon-link"></span></a>Defaults</h3>
+
+<p>The default reporter is <code>spec</code>, like in Mocha.  Mochify's default reporter is <code>dot</code>.</p>
+
+<p><code>color</code> is on by default.</p>
+
+<h3>
+<a id="debug-mode" class="anchor" href="#debug-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Debug Mode</h3>
+
+<p>Even if <code>debug</code> is <code>false</code> or unspecified in the Grunt config, you can start any target in "debug" mode via:</p>
+
+<div class="highlight highlight-shell"><pre>$ grunt mochify:myTarget:debug</pre></div>
+
+<h3>
+<a id="phantomjs" class="anchor" href="#phantomjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>PhantomJS</h3>
+
+<p>PhantomJS is a dependency of this module, so you don't have to worry about specifying its path or installing globally or whatever.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<div class="highlight highlight-shell"><pre>$ npm install --save-dev grunt grunt-mochify</pre></div>
+
+<h2>
+<a id="fair-warning" class="anchor" href="#fair-warning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fair Warning</h2>
+
+<p>I haven't tested this much.</p>
+
+<h2>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<p><a href="https://github.com/boneskull">Christopher Hiller</a></p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Copyright 2015, <a href="http://www.focusvision.com">FocusVision Worldwide</a>.  Licensed MIT.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/decipherinc">decipherinc</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-39154813-4");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
