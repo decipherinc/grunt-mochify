@@ -11,8 +11,7 @@ function mochifyTask(grunt) {
     var options = this.options({
       reporter: 'spec',
       colors: !!process.stdout.isTTY,
-      debug: target === 'debug',
-      phantomjs: require.resolve('phantomjs/bin/phantomjs')
+      debug: target === 'debug'
     });
 
     var args = map(options, function (value, name) {

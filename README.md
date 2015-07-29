@@ -43,10 +43,6 @@ Even if `debug` is `false` or unspecified in the Grunt config, you can start any
 $ grunt mochify:myTarget:debug
 ```
 
-### PhantomJS
-
-PhantomJS is a dependency of this module, so you don't have to worry about specifying its path or installing globally or whatever.
-
 ## Installation
 
 ```shell
