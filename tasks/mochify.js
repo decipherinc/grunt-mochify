@@ -4,7 +4,6 @@ var unparseArgs = require('unparse-args');
 var ketch = require('ketch');
 
 function mochifyTask(grunt) {
-
   grunt.registerMultiTask('mochify', 'Run Mochify', function(target) {
     var done = this.async();
     var options = this.options();

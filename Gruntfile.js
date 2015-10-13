@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   var loadGruntConfig = require('load-grunt-config');
   var pkg = grunt.file.readJSON('package.json');
 
@@ -15,23 +15,24 @@ module.exports = function (grunt) {
   };
 
   Object.defineProperty(data, 'author', {
+
     /**
      * Normalizes `author` field of `package.json`.
      * @returns {string} Author name(s) and email(s)
      */
     get: function author() {
-      function _author(author) {
+      function _author(auth) {
         var format;
-        if (typeof author === 'string') {
-          return author;
+        if (typeof auth === 'string') {
+          return auth;
         }
         format = require('util').format;
-        return format('%s <%s>', author.name, author.email);
+        return format('%s <%s>', auth.name, auth.email);
       }
 
       if (Array.isArray(pkg.author)) {
-        return pkg.author.map(function (author) {
-          return _author(author);
+        return pkg.author.map(function(auth) {
+          return _author(auth);
         }).join(', ');
       }
       return _author(pkg.author);
@@ -53,5 +54,4 @@ module.exports = function (grunt) {
     },
     data: data
   });
-
 };
